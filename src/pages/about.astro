@@ -1,5 +1,6 @@
 ---
-
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
 const pageTitle = "À propos de moi";
@@ -48,9 +49,7 @@ const textCase = "uppercase";
 
 	</head>
 	<body>
-        <a href="/">Accueil</a>
-        <a href="/about/">À propos</a>
-        <a href="/blog/">Blog</a>
+        <Header />
 
   
   <h1>{pageTitle}</h1>
@@ -78,5 +77,11 @@ const textCase = "uppercase";
 {finished && <p>J'ai terminé ce tutoriel !</p>}
 
 {goal === 3 ? <p>Mon objectif est de terminer en 3 jours.</p> : <p>Mon objectif n'est pas de 3 jours.</p>}
-	</body>
+	
+	<Footer />
+
+	 <script>
+    import "../scripts/menu.js";
+  </script>
+</body>
 </html>
